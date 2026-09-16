@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water Leak Detection Service in North Mountain Village, Phoenix</title>
+<meta name="description" content="Professional water leak detection service in North Mountain Village, Phoenix. Fast leak repair for slab leaks, pipes, and water lines. Call 858-422-5102.">
+<link rel="canonical" href="https://www.northmountainvillageleakdetection.example/water-leak-detection.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   North Mountain Village Leak Detection — Shared Stylesheet
+   Design language: "diagnostic readout" — deep ink + teal for
+   water, restrained amber reserved for gas/safety alerts only.
+   ========================================================= */
+
+:root {
+  --ink: #10233B;
+  --ink-2: #16304F;
+  --teal: #1B7A72;
+  --teal-dark: #124E49;
+  --teal-tint: #E7F1EF;
+  --amber: #B5720A;
+  --amber-tint: #FBF0DD;
+  --danger: #9C2B22;
+  --danger-tint: #FBEAE8;
+  --paper: #F5F6F3;
+  --paper-2: #EDEFEA;
+  --ink-text: #202A32;
+  --muted: #566270;
+  --line: #DBDFD9;
+  --white: #FFFFFF;
+
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+
+  --radius-s: 4px;
+  --radius-m: 8px;
+  --maxw: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink-text);
+  background: var(--paper);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--teal-dark); }
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  font-weight: 600;
+}
+
+h1 { font-size: clamp(2rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); }
+h3 { font-size: 1.2rem; }
+
+p { max-width: 68ch; }
+.center p { margin-left: auto; margin-right: auto; }
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Top utility bar (transparency notice) ---------- */
+.disclosure-bar {
+  background: var(--ink);
+  color: #C9D3DC;
+  font-size: 0.82rem;
+  text-align: center;
+  padding: 7px 16px;
+}
+.disclosure-bar a { color: #E7F1EF; text-decoration: underline; }
+
+/* ---------- Header ---------- */
+header.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  gap: 20px;
+}
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--ink);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.brand span.mark { color: var(--teal); }
+.logo-mark { flex-shrink: 0; }
+
+nav.main-nav { display: flex; gap: 26px; align-items: center; }
+nav.main-nav a {
+  color: var(--ink-text);
+  text-decoration: none;
+  font-size: 0.96rem;
+  font-weight: 500;
+}
+nav.main-nav a:hover { color: var(--teal-dark); }
+nav.main-nav a.current { color: var(--teal-dark); border-bottom: 2px solid var(--teal); padding-bottom: 3px; }
+
+.header-cta {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.phone-link {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1.02rem;
+  white-space: nowrap;
+}
+.phone-link:hover { color: var(--teal-dark); }
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 11px 20px;
+  border-radius: var(--radius-s);
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn-primary { background: var(--teal); color: var(--white); }
+.btn-primary:hover { background: var(--teal-dark); }
+.btn-outline { background: transparent; border-color: var(--ink); color: var(--ink); }
+.btn-outline:hover { background: var(--ink); color: var(--white); }
+.btn-amber { background: var(--amber); color: var(--white); }
+.btn-amber:hover { background: #925909; }
+
+.nav-toggle { display: none; }
+
+/* ---------- Hero ---------- */
+.hero {
+  background: linear-gradient(180deg, var(--ink) 0%, var(--ink-2) 100%);
+  color: var(--white);
+  padding: 64px 0 84px;
+}
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero h1 { color: var(--white); }
+.hero .eyebrow-line {
+  color: #9FD3CB;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+.hero p.lede {
+  color: #CBD6DE;
+  font-size: 1.1rem;
+  max-width: 52ch;
+}
+.hero-actions { display: flex; gap: 14px; margin-top: 28px; flex-wrap: wrap; }
+.hero-trust {
+  margin-top: 30px;
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  color: #9AA9B6;
+}
+.hero-trust span { display: flex; align-items: center; gap: 7px; }
+
+.gauge-figure { display: flex; align-items: center; justify-content: center; }
+
+/* ---------- Section rhythm ---------- */
+section { padding: 68px 0; }
+section.tight { padding: 44px 0; }
+.section-band { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section-band-alt { background: var(--paper-2); }
+.section-head { max-width: 62ch; margin-bottom: 36px; }
+.section-head p { color: var(--muted); }
+
+/* ---------- Service cards ---------- */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.service-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.service-card.water { border-top: 3px solid var(--teal); }
+.service-card.gas { border-top: 3px solid var(--amber); }
+.service-card .card-icon { margin-bottom: 4px; }
+.service-card h3 { margin-bottom: 2px; }
+.service-card p { color: var(--muted); font-size: 0.97rem; }
+.service-card .tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+}
+.service-card a.card-link {
+  margin-top: auto;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--teal-dark);
+}
+.service-card.gas a.card-link { color: var(--amber); }
+
+/* ---------- Process steps (legitimate sequence) ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  counter-reset: step;
+}
+.step {
+  position: relative;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+.step::before {
+  counter-increment: step;
+  content: counter(step);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--teal);
+  display: block;
+  margin-bottom: 10px;
+}
+.step h3 { margin-bottom: 6px; }
+.step p { color: var(--muted); font-size: 0.95rem; }
+
+/* ---------- Icon badges (page header illustrations) ---------- */
+.icon-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.icon-badge.teal { background: var(--teal-tint); }
+.icon-badge.amber { background: var(--amber-tint); }
+.icon-badge.ink { background: var(--paper-2); }
+
+/* ---------- Alert boxes ---------- */
+.alert {
+  border: 1px solid var(--line);
+  border-left-width: 5px;
+  border-radius: var(--radius-s);
+  padding: 20px 22px;
+  margin: 28px 0;
+}
+.alert.danger { border-left-color: var(--danger); background: var(--danger-tint); }
+.alert.notice { border-left-color: var(--amber); background: var(--amber-tint); }
+.alert.info { border-left-color: var(--teal); background: var(--teal-tint); }
+.alert h3 { margin-bottom: 8px; font-size: 1.05rem; }
+.alert p { margin: 0; max-width: none; }
+.alert ul { margin: 8px 0 0; padding-left: 20px; }
+
+/* ---------- Two column content ---------- */
+.two-col {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+.side-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 26px;
+}
+.side-card h3 { font-size: 1rem; margin-bottom: 12px; }
+.side-card .num {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.side-card ul { padding-left: 18px; margin: 12px 0 0; font-size: 0.93rem; color: var(--muted); }
+.side-card ul li { margin-bottom: 6px; }
+
+/* ---------- FAQ ---------- */
+details.faq-item {
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+}
+details.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-family: var(--font-display);
+  color: var(--ink);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+details.faq-item summary::-webkit-details-marker { display: none; }
+details.faq-item summary::after {
+  content: "+";
+  font-size: 1.3rem;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+details.faq-item[open] summary::after { content: "2"; }
+details.faq-item p { margin: 12px 0 0; color: var(--muted); }
+
+/* ---------- Contact / form ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+form.lead-form { display: flex; flex-direction: column; gap: 16px; }
+.form-row { display: flex; flex-direction: column; gap: 6px; }
+label { font-size: 0.9rem; font-weight: 600; color: var(--ink); }
+input, select, textarea {
+  font-family: var(--font-body);
+  font-size: 0.97rem;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--white);
+  color: var(--ink-text);
+}
+textarea { resize: vertical; min-height: 100px; }
+.form-note { font-size: 0.82rem; color: var(--muted); }
+
+.info-list { list-style: none; padding: 0; margin: 0; }
+.info-list li {
+  display: flex;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+.info-list li:first-child { padding-top: 0; }
+.info-list .k { font-weight: 600; color: var(--ink); min-width: 90px; }
+
+/* ---------- CTA band ---------- */
+.cta-band {
+  background: var(--teal-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 56px 0;
+}
+.cta-band h2 { color: var(--white); }
+.cta-band p { color: #CFE6E2; margin: 0 auto 24px; }
+
+/* ---------- Legal pages ---------- */
+.legal h2 { margin-top: 2em; }
+.legal p, .legal li { color: var(--ink-text); }
+.legal .updated { color: var(--muted); font-size: 0.9rem; }
+
+/* ---------- Footer ---------- */
+footer.site-footer {
+  background: var(--ink);
+  color: #AEBBC6;
+  padding: 48px 0 28px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.footer-grid h4 {
+  color: var(--white);
+  font-size: 0.95rem;
+  margin-bottom: 14px;
+}
+.footer-grid a { color: #AEBBC6; text-decoration: none; display: block; margin-bottom: 8px; font-size: 0.92rem; }
+.footer-grid a:hover { color: var(--white); }
+.footer-disclaimer {
+  border-top: 1px solid #2A3E56;
+  padding-top: 20px;
+  font-size: 0.82rem;
+  color: #8A98A5;
+  line-height: 1.6;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #728191;
+}
+
+/* ---------- Breadcrumb ---------- */
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 14px 0 0;
+}
+.breadcrumb a { color: var(--muted); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* ---------- Skip link ---------- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--white);
+  padding: 10px 16px;
+  z-index: 100;
+}
+.skip-link:focus { left: 10px; top: 10px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .gauge-figure { order: -1; max-width: 260px; margin: 0 auto; }
+  .service-grid, .steps, .two-col, .contact-grid, .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  nav.main-nav { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation: none !important; transition: none !important; }
+}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Water Leak Detection",
+  "provider": {
+    "@type": "Organization",
+    "name": "North Mountain Village Leak Detection",
+    "telephone": "+1-858-422-5102",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[Street address needed]",
+      "addressLocality": "Phoenix",
+      "addressRegion": "AZ",
+      "postalCode": "[ZIP needed]",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": "North Mountain Village, Phoenix, AZ",
+  "description": "Water leak detection and repair service for North Mountain Village, Phoenix."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.northmountainvillageleakdetection.example/"},
+    {"@type": "ListItem", "position": 2, "name": "Water Leak Detection", "item": "https://www.northmountainvillageleakdetection.example/water-leak-detection.html"}
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="nav-row wrap">
+    <a class="brand" href="index.html"><svg class="logo-mark" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M15 2C15 2 6 13.5 6 19.5C6 24.194 10.0294 28 15 28C19.9706 28 24 24.194 24 19.5C24 13.5 15 2 15 2Z" fill="#1B7A72"/><path d="M15 2C15 2 6 13.5 6 19.5C6 22.5 7.5 25 10 26.5" stroke="#3FA79C" stroke-width="0" fill="none"/><circle cx="15" cy="20" r="4.5" fill="#F5F6F3"/><line x1="15" y1="20" x2="18" y2="16.5" stroke="#B5720A" stroke-width="1.8" stroke-linecap="round"/></svg>North Mountain Village <span class="mark">Leak Detection</span></a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="water-leak-detection.html" class="current">Water Leak Detection</a>
+      <a href="gas-leak-detection.html">Gas Leak Detection</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="phone-link" href="tel:8584225102">858-422-5102</a>
+      <a class="btn btn-primary" href="contact.html">Request a Pro</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <div class="wrap breadcrumb">
+    <a href="index.html">Home</a> / Water Leak Detection
+  </div>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="icon-badge teal">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 2C12 2 5 11 5 15.5C5 19.09 8.13 22 12 22C15.87 22 19 19.09 19 15.5C19 11 12 2 12 2Z" stroke="#1B7A72" stroke-width="1.6"/></svg>
+      </div>
+      <p class="eyebrow-line" style="color:var(--teal-dark);">Water</p>
+      <h1>Water leak detection service for North Mountain Village homes and buildings</h1>
+      <p class="lede" style="color:var(--muted); max-width:60ch;">A hidden water leak rarely announces itself clearly — it shows up as a higher bill, a musty smell, or a damp patch that keeps coming back. Tell us what you're seeing and we'll schedule a technician to find the source.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="contact.html">Describe Your Leak</a>
+        <a class="btn btn-outline" href="tel:8584225102">Call 858-422-5102</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-band">
+    <div class="wrap two-col">
+      <div>
+        <h2>Signs you may have a hidden water leak</h2>
+        <p>Not every leak is obvious. These are common signs residents in older North Mountain Village properties and newer builds alike report before a leak is found:</p>
+        <ul>
+          <li>Your water bill has climbed with no change in usage.</li>
+          <li>You hear running water when every fixture is off.</li>
+          <li>A warm spot on the floor, which can point to a hot water line leak under a slab.</li>
+          <li>Damp drywall, bubbling paint, or a musty smell in one area.</li>
+          <li>Wet or unusually green patches in the yard near a water line.</li>
+          <li>The water meter dial keeps moving with all taps closed.</li>
+        </ul>
+
+        <h2>What a water leak detection visit typically covers</h2>
+        <p>Our technicians will generally:</p>
+        <ul>
+          <li>Check the water meter to confirm whether water is actively being lost.</li>
+          <li>Use acoustic or thermal equipment to narrow down the leak's location without unnecessary demolition.</li>
+          <li>Identify whether the leak is in a supply line, a slab, an irrigation line, or a fixture.</li>
+          <li>Explain what they found and the repair options before starting any work.</li>
+        </ul>
+        <p style="color:var(--muted); font-size:0.9rem;">Exact methods, equipment, and pricing vary by job — this is a general overview of our process.</p>
+
+        <div class="alert info">
+          <h3>Not sure if it's urgent?</h3>
+          <p>Active water intrusion into walls, ceilings, or flooring can lead to mold within 24–48 hours. If you can see or hear running water and don't know the source, it's worth requesting a technician the same day rather than waiting.</p>
+        </div>
+      </div>
+
+      <aside class="side-card">
+        <h3>Request a water leak technician</h3>
+        <p style="color:var(--muted); font-size:0.92rem;">Submit your details and we'll schedule a technician to visit.</p>
+        <a class="btn btn-primary" href="contact.html" style="margin-top:10px; width:100%; text-align:center;">Start a Request</a>
+        <p class="form-note" style="margin-top:14px;">Prefer to talk it through? Call <a href="tel:8584225102">858-422-5102</a>.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Water leak FAQs</h2>
+      </div>
+      <details class="faq-item">
+        <summary>Will finding the leak damage my walls or floors?</summary>
+        <p>Modern leak detection generally relies on acoustic listening equipment, thermal imaging, or pressure testing to narrow the location before anyone opens a wall or floor. Ask the technician who contacts you what method they plan to use for your situation.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can this wait until next week?</summary>
+        <p>It depends on what you're seeing. A slow, contained leak outdoors may be less urgent than active water inside a wall or ceiling. If you're unsure, call us and describe what you're observing.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you repair the leak yourselves?</summary>
+        <p>No — our own technicians handle the diagnosis and repair directly, and we'll walk you through pricing before any work begins.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <h2>Request our water leak detection & repair service</h2>
+      <p>Most requests are routed to a technician the same day.</p>
+      <a class="btn btn-primary" href="contact.html">Start Your Request</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>North Mountain Village Leak Detection</h4>
+        <p style="color:#8A98A5; font-size:0.9rem; max-width:38ch;">[Street address needed], Phoenix, AZ [ZIP needed]<br>Local water and gas leak detection and repair, serving North Mountain Village and the greater Phoenix area.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="water-leak-detection.html">Water Leak Detection</a>
+        <a href="gas-leak-detection.html">Gas Leak Detection</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 North Mountain Village Leak Detection.</span>
+      <span><a href="tel:8584225102" style="color:#AEBBC6;">858-422-5102</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
